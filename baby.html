@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a Baby Shower</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/a1/16/55/a116554c35fab75cdfaff35097b272d6.gif'); /* Reemplaza con la URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            background-image: url("https://thumbs.dreamstime.com/b/cute-baby-elephant-sleeping-crescent-cute-baby-elephant-sleeping-crescent-flat-cartoon-vector-illustration-210823358.jpg?w=576");
+            background-size: cover;           
+            border-radius: 40px;
+            max-width: 800px;
+            margin: 70px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #FF69B4; /* Rosa brillante */
+        }
+        p {
+            color: #333;
+        }
+        label {
+            color: #b814b8; /* Verde oscuro */
+        }
+        .btn {
+            background-color: #ec53ec; /* Azul acero */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #9f00ed; /* Azul royal */
+        }
+        .container1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            background-image: url("https://dbdzm869oupei.cloudfront.net/img/quadres/preview/44055.png");
+            background-size: cover;
+            background-position: center;
+            border-radius: 50px;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 50px;
+            text-align: center;
+        }
+        .container1 img {
+            max-width: 100%;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡MI BABY SHOWER!</h1>
+        <b>Nos complace mucho invitarte a celebrar la llegada de nuestra bebé.</b>
+        <p><br>
+        <b>Fecha:</b> Domingo, 7 de julio de 2024</p>
+        <p><b>Hora:</b> 3:00 PM</p>
+        <p><b>Lugar:</b></p>
+        <button class="btn" onclick="window.open('https://maps.app.goo.gl/fdrLbLfTQ2HDjkMp9', '_blank')">Ver Ubicación en Google Maps</button>
+        <p><br>
+        Apreciamos que traigas tu mejor sonrisa y, si lo deseas, un regalo pequeño para la bebé. Pero lo más importante es que vengas a compartir este momento tan especial con nosotros.</p>
+        <p><br>
+        Por favor, confirma tu asistencia</p>
+        <p><br>
+        ¡TE ESPERAMOS!</b>
+    </div>
+
+    <div class="container1">
+        <p>AYÚDANOS A ELEGIR EL PRIMER NOMBRE DE NUESTRA HIJA.</p>
+        <form id="nameForm">
+            <label>
+                <input type="radio" name="nombre" value="Julieta"> Julieta
+            </label><br><p>
+            <label>
+                <input type="radio" name="nombre" value="Brisa"> Brisa
+            </label><br><p>
+            <label>
+                <input type="radio" name="nombre" value="Aleli"> Alelí
+            </label><br><br><p>
+            <button type="button" class="btn" onclick="sendWhatsApp()">Confirmar Asistencia</button>
+        </form>
+    </div>
+
+    <script>
+        function sendWhatsApp() {
+            var selectedName = document.querySelector('input[name="nombre"]:checked').value;
+            var message = "¡HOLA, CONFIRMO MI ASISTENCIA! MI ELECCIÓN DE NOMBRE ES " + selectedName;
+            var url = "https://wa.me/525532601049?text=" + encodeURIComponent(message);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
